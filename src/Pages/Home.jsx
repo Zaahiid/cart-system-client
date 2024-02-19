@@ -9,7 +9,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/api/v1/product");
+        const response = await axios.get(`${import.meta.env.VITE_SERVER_URL}/api/v1/product`);
         setData(response.data);
         console.log(response.data);
       } catch (error) {
@@ -26,7 +26,7 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <div className="flex flex-col md:flex-row flex-wrap gap-8 justify-center items-center md:items-stretch my-10">
-        {data && data.map((item) => <ProductCard key={item._id} item={item} />)}
+        {data && data?.map((item) => <ProductCard key={item._id} item={item} />)}
       </div>
     </div>
   );

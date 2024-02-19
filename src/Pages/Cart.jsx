@@ -32,7 +32,7 @@ const Cart = () => {
       cart: cartData,
       totalAmount: Number(calculateGrandTotal()),
     };
-    const response = await axios.post("/api/v1/order", bodyData);
+    const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/order`, bodyData);
     if (response?.data?.status === "201") {
       alert("Order recieved, Please proceed payment.");
     }
@@ -46,7 +46,7 @@ const Cart = () => {
     const headers = {
       "Content-Type": "application/json",
     };
-    const response = await axios.post("/api/v1/order/checkout", body);
+    const response = await axios.post(`${import.meta.env.VITE_SERVER_URL}/api/v1/order/checkout`, body);
     const result = await stripe.redirectToCheckout({
       sessionId: response?.data?.id,
     });
