@@ -13,10 +13,10 @@
 
 ### Local Setup
 1. Clone the repository
-`git clone https://github.com/Zaahiid/`
+`git clone https://github.com/Zaahiid/cart-system-client.git`
 
 2. Navigate to the directory
-`cd `
+`cd cart-system-client`
 
 3. Install dependencies
 `npm install`
