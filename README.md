@@ -29,7 +29,4 @@ Run the command in the root directory
 
 Now App should be running on `http://localhost:5173/`
 
-### Live Client 
-[Shopenture Live]()
-
 ##### Thank You. 😊
